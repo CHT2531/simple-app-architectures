@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A simple single page app</title>
+	<style>
+	.page{
+		border:1px solid black;
+		padding:20px;
+		margin-top:20px;
+	}
+
+	.hide{
+		display:none;
+	}
+
+	</style>
+</head>
+<body>
+<a id="page1Link" data-page="1" href="page1.html">Screen 1</a>|
+<a id="page2Link" data-page="2" href="page2.html">Screen 2</a>
+<div class="container">
+	<div class="page" id="page1">Screen 1</div>
+	<div class="page hide" id="page2">Screen 2</div>
+</div>
+
+
+
+<script src="js/history-api.js"></script>
+</body>
+</html>
