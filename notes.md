@@ -122,15 +122,14 @@ const films=[
 ]
 
 const filmsJson=JSON.stringify(films); //convert array into JSON
-sessionStorage.setItem("films", filmsJson);
+sessionStorage.setItem("films", filmsJson); //store data in web storage
 
 //later on retrieve items from sessionStorage
 films=JSON.parse(sessionStorage.getItem('films')); //convert JSON into array
-console.log(films[0].title);
-//outputs Jaws
+console.log(films[0].title); //outputs Jaws
 ```
 #### Web Storage - Use cases
-* Navigation (Maintaining state between different pages)
+* Navigation (maintaining state between different pages)
   * The user selects an item on page 1
   * Store the id in web storage
   * User navigates to page 2
@@ -186,12 +185,14 @@ window.addEventListener('popstate', getHistoryInfo, false);
   - Use Ajax to load a list of items
   - Use the DOM to display items in the HTML page
   - User clicks on an item
-  - Pass the id of the item in the querystring e.g. page2.html?id=2
+  - Pass the id of the item in the querystring e.g. *page2.html?id=2*
   - Browser goes to page 2
+
 * Page 2
   - Get the id from the query string
   - Using this id, use Ajax to load the full details for the item
   - Use the DOM to display the details for the user
+  - See *passing-data-querystring* for a complete example
 
 #### Passing data using web storage
 * Page 1
@@ -205,6 +206,7 @@ window.addEventListener('popstate', getHistoryInfo, false);
 * Page 2
   - Get the item's data from web storage
   - Use the DOM to display the details for the user
+  - See *passing-data-web-storage* for a complete example
 
 ### Single Page App
 * Use Ajax to load a list of items.
