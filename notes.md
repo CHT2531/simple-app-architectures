@@ -125,7 +125,7 @@ const filmsJson=JSON.stringify(films); //convert array into JSON
 sessionStorage.setItem("films", filmsJson);
 
 //later on retrieve items from sessionStorage
-films=JSON.parse(storage.getItem('films')); //convert JSON into array
+films=JSON.parse(sessionStorage.getItem('films')); //convert JSON into array
 console.log(films[0].title);
 //outputs Jaws
 ```
